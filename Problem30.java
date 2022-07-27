@@ -18,19 +18,14 @@ public class Problem30 {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         ArrayList<Integer> array = new ArrayList<>();
-        for(int i=1; i < n*n+1; i++)
-        {
-            array.add(i);
-        }
+        for(int i=1; i < n*n+1; i++) array.add(i);
         for(int i=0; i < n; i++){
             List<Integer> ele = array.subList(i*n, (i+1)*n);
-            if(i%2 != 0)
-            {
+            if(i%2 != 0) {
                 Collections.reverse(ele);
             }
             for (Integer e : ele) {
-                System.out.print(e);
-                System.out.print('\t');
+                System.out.print(e + "\t");
             }
             System.out.println();
         }
